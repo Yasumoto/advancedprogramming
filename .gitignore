@@ -1,0 +1,9 @@
+./cls/*
+*.swp
+*.swo
+*.aux
+*.pdf
+*.log
+*.class
+*.o
+core
