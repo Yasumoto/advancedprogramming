@@ -23,6 +23,7 @@ public class qgram {
 		int word_one_length = word_one.length();
 		int word_two_length = word_two.length();
 
+		// Create arrays which contain each generated gram
 		String[] one_grams = break_into_grams(gram_length, word_one);
 		String[] two_grams = break_into_grams(gram_length, word_two);
 
@@ -45,8 +46,10 @@ public class qgram {
 			}
 		}
 
-		System.out.println("The total matches are: " + matches);
-		System.out.println("Unique grams are: " + set_of_grams.size());
+		// Calculate the similarity score between the two strings
+		double ratio = (double)matches / set_of_grams.size() * 100.0;
+
+		System.out.println("The ratio of matches is: " + ratio + "%");
 	}
 
 	public static String[] break_into_grams(int gram_length, String word)
