@@ -4,7 +4,7 @@
 #include<iostream>
 #include<string>
 
-using namespace std
+using namespace std;
 
 class cpsc370math {
     public:
