@@ -1,3 +1,66 @@
 * Intro
 ** Went over Makefiles
 
+* Quiz
+
+1)
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+	cout << "Hello, World!" << endl;
+	return 0;
+}
+
+2) 
+
+pass by value makes a copy, pass by reference doesn't
+
+3)
+
+make a function thingy:
+
+void foo(int a, int c, string d, int b = 10, string d = "insane")
+
+* Assignment 1
+
+** Pointers!
+
+int a; this is 32 bits, blah blah..  
+
+int* p;		        ___
+		       | A |
+p = &a		p[]==> |___|
+
+*p = 2;
+
+if there's an asterisk before a pointer (like above), it means to follow this pointer and assign to where it points.
+			 ___ 
+			| 2 |
+		 p[]==> |___|
+
+There's really no good reason to do this sort of stuff (that's above)
+
+"dereferencing" means ignore the pointer, and go to what it's pointing to
+
+* Classes
+
+.h
+=====
+#include<iostream>
+#include<string>
+using namespace std;
+
+class Student {
+	Public:
+		Student(string);
+	void printName();
+
+	Private:
+		string m_name;
+}
+
+.cpp
+=====
+#include "Student.h"

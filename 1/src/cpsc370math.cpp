@@ -26,13 +26,17 @@ int cpsc370math::gcd(const int &x, const int &y){
 // Takes n, returns an array with all prime numbers less than n
 int* cpsc370math::prime(const int &n){
 	int i = 1;
+	int j;
 	if (n < 0) {
 		std::cout << "Please enter a positive number.\n" << std::endl;
 	}
 
 	int * primes = new int[n];
 
-	for(i = 0; i < n/2; ++i){
+	for(i = 1; i < n/2; ++i){
+		for (j = 0; j < i; ++j){
+
+		}
 	}
 
 
