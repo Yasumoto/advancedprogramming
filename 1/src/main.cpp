@@ -3,6 +3,7 @@
 int main(int argc, char** argv){
 	cpsc370math math;
 
+	while ( 1 ) {
 	cout << "Welcome to the calculator of awesomeness!" << endl;
 	cout << "Please enter a number to make your suggestion: " << endl;
 	cout << "1. Factorial" << endl;
@@ -12,10 +13,34 @@ int main(int argc, char** argv){
 	cout << "5. Dot Product" << endl;
 	cout << "6. Matrix Product" << endl;
 	cout << "7. Transpose" << endl;
+	cout << "8. Quit" << endl;
 
-	/*
+	int num;
+	int n, x, y;
+	int result;
+
+	cin >> num;
+
+	if (num == 1){
+		cout << "Enter an int n" << endl;
+		cin >> n;
+		result = math.factorial(n);
+		cout << result << endl;
+	}
+
+	if (num == 2){
+		cout << "Enter int x, followed by int y" << endl;
+		cin >> x;
+		cin >> y;
+		result = math.gcd (x, y);
+		cout << result << endl;
+	}
+	
+	if (num == 3){
+		cout << "Enter an int n" << endl;
+		cin >> n;
 	// Primes
-	int* primes = math.prime(50);
+	int* primes = math.prime(n);
 
 	int i = 0;
 
@@ -25,8 +50,42 @@ int main(int argc, char** argv){
 		}
 		++i;
 	}
-	*/
+	}
 
+	if (num == 4){
+		int ** mat = new int*[2];
+		mat[0] = new int[2];
+		mat[1] = new int[2];
+
+		cout << "Enter your four int's (hitting enter after each)" << endl;
+
+		cin >> mat[0][0];
+		cin >> mat[0][1];
+		cin >> mat[1][0];
+		cin >> mat[1][1];
+
+		result = math.determinant(mat);
+		cout << result << endl;
+	}
+
+	if (num == 5){
+		float mat_1[2];
+		float mat_2[2];
+
+		cout << "Enter your four float's (hitting enter after each)" << endl;
+
+		cin >> mat_1[0];
+		cin >> mat_1[1];
+		cin >> mat_2[0];
+		cin >> mat_2[1];
+
+		result = math.dot_product(mat_1, mat_2);
+		cout << result << endl;
+	}
+
+
+	if (num == 6){
+		cout << "You said to make it easy on you, so I have implemented an example for you in code" << endl;
 	// Matrix Multiplication
 	int** matrix = new int*[2];
 	for (int i = 0; i < 2; ++i){
@@ -51,7 +110,6 @@ int main(int argc, char** argv){
 	matrix_2[2][0] = 0;
 	matrix_2[2][1] = 4;
 
-	/*
 	int** product = math.matrix_product(matrix, matrix_2, 3, 2, 2, 3);
 
 	int zero_zero = product[0][0];
@@ -66,8 +124,10 @@ int main(int argc, char** argv){
 	cout << one_zero;
 	cout << " ";
 	cout << one_one << endl;
-	*/
+	}
 
+	if (num == 7){
+		cout << "You said to make it easy on you, so I have implemented an example for you in code" << endl;
 	int** matrix_t = new int*[2];
 	for (int i = 0; i < 2; ++i){
 		matrix_t[i] = new int[4];
@@ -107,8 +167,11 @@ int main(int argc, char** argv){
 	cout << three_zero;
 	cout << " ";
 	cout << three_one << endl;
+	}
 
+	if (num == 8){
+		return 0;
+	}
 
-
-	return 0;
+	}
 }
