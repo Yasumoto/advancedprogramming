@@ -30,6 +30,8 @@ int* cpsc370math::prime(const int &n){
 		std::cout << "Please enter a positive number.\n" << std::endl;
 	}
 
+	int * primes = new int[n];
+
 	for(i = 0; i < n/2; ++i){
 
 
