@@ -15,7 +15,12 @@ int cpsc370math::factorial(int n){
 
 // Takes x and y, returns their greatest common divisor
 int cpsc370math::gcd(int x, int y){
-	return 1;
+	if (y == 0){
+		return x;
+	}
+	else {
+		return cpsc370math::gcd(y, x % y);
+	}
 };
 
 // Takes n, returns an array with all prime numbers less than n
