@@ -4,7 +4,7 @@ cpsc370math::cpsc370math(){
 };
 
 // Takes n, returns n!
-int cpsc370math::factorial(int n){
+int cpsc370math::factorial(const int& n){
 	if (n == 1){
 		return 1;
 	}
@@ -14,7 +14,7 @@ int cpsc370math::factorial(int n){
 };
 
 // Takes x and y, returns their greatest common divisor
-int cpsc370math::gcd(int x, int y){
+int cpsc370math::gcd(const int &x, const int &y){
 	if (y == 0){
 		return x;
 	}
@@ -24,12 +24,20 @@ int cpsc370math::gcd(int x, int y){
 };
 
 // Takes n, returns an array with all prime numbers less than n
-int* cpsc370math::prime(int n){
-	return &n;
+int* cpsc370math::prime(const int &n){
+	int i = 1;
+	if (n < 0) {
+		std::cout << "Please enter a positive number.\n" << std::endl;
+	}
+
+	for(i = 0; i < n/2; ++i){
+
+
+	return &tmi;
 };
 
 // Takes a square matrix n (array of arrays) and the size
-int cpsc370math::determinant(int** matrix, int size){
+int cpsc370math::determinant(int** matrix, const int& size){
 	return 1;
 };
 
@@ -39,11 +47,11 @@ double cpsc370math::dot_product(float* vector_1, float* vector_2){
 };
 
 // Takes two matrices and their width/height, width/height
-int** cpsc370math::matrix_product(int** matrix, int** matrix_2, int width, int height, int width_2, int height_2){
+int** cpsc370math::matrix_product(int** matrix, int** matrix_2, const int& width, const int& height, const int& width_2, const int& height_2){
 	return matrix;
 };
 
 // Takes 2D matrix of size x,y and computes transpose
-int** cpsc370math::transpose(int** matrix, int width, int height){
+int** cpsc370math::transpose(int** matrix, const int& width, const int& height){
 	return matrix;
 };

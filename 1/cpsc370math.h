@@ -4,6 +4,8 @@
 #include<iostream>
 #include<string>
 
+#define E 2.7182818284590451
+
 using namespace std;
 
 class cpsc370math {
@@ -11,25 +13,25 @@ class cpsc370math {
     cpsc370math();
 
     // Takes n, returns n!
-    int factorial(int);
+    int factorial(const int&);
 
     // Takes x and y, returns their greatest common divisor
-    int gcd(int, int);
+    int gcd(const int&, const int&);
 
     // Takes n, returns an array with all prime numbers less than n
-    int* prime(int);
+    int* prime(const int&);
 
     // Takes a square matrix n (array of arrays) and the size
-    int determinant(int**, int);
+    int determinant(int**, const int&);
 
     // Takes two vectors of same length (with (x_1, y_1) and (x_2, y_2) coordinates)
     double dot_product(float*, float*);
 
     // Takes two matrices and their width/height, width/height
-    int** matrix_product(int**, int**, int, int, int, int);
+    int** matrix_product(int**, int**, const int&, const int&, const int&, const int&);
 
     // Takes 2D matrix of size x,y and computes transpose
-    int** transpose(int**, int, int);
+    int** transpose(int**, const int&, const int&);
     
     private:
     int n, x, y, size, width_1, height_1, width_2, heigh_2;
