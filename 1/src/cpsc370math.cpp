@@ -29,10 +29,12 @@ int* cpsc370math::prime(const int &n){
 
 	int* list_of_primes = new int[n];
 
+	// Create the array with every number up to n
 	for (i = 0; i<n; ++i){
 		list_of_primes[i] = 2+i;
 	}
 
+	// progress through the array, eliminating each number that is a multiple of a previous prime number
 	for (i = 2; i<n; ++i){
 		for (j = 0; j < n; ++j){
 			if (j != 0){

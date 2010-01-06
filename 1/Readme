@@ -1,3 +1,7 @@
+The calculator is enclosed in a large while loop, allowing you to choose which function you'd like to use. I was unable to create a frontend for the last two problems, I am sorry for that. However, I believe everything else will work to your satisfaction, if I haven't had time to properly clean/comment it.
+
+
+
 The GCD function is Euclid's algorithm, taken from http://en.wikipedia.org/wiki/Greatest_common_divisor
 
 For my prime number calculator, I looked at http://en.wikipedia.org/wiki/Prime_number for a general referesher, and spoke with Josh King about the general idea for the implementation, then proceeded to trash it on my own.
