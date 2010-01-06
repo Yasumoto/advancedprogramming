@@ -12,7 +12,7 @@ CFLAGS=-c -Wall
 LIBS=
 
 #additional includes
-INCL=
+INCL=-I../include
 
 SRC=cpsc370math.cpp main.cpp
 

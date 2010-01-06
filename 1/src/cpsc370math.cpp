@@ -33,9 +33,10 @@ int* cpsc370math::prime(const int &n){
 	int * primes = new int[n];
 
 	for(i = 0; i < n/2; ++i){
+	}
 
 
-	return &tmi;
+	return &i;
 };
 
 // Takes a square matrix n (array of arrays) and the size
