@@ -6,7 +6,7 @@
 # Code Released under GPLv2
 
 CC=g++
-CFLAGS=-c -Wall
+CFLAGS=-c -Wall -g
 
 #link libraries
 LIBS=

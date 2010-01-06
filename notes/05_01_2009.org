@@ -46,8 +46,12 @@ There's really no good reason to do this sort of stuff (that's above)
 
 * Classes
 
+INTERFACE
 .h
 =====
+#ifndef STUDENT_H
+#define STUDENT_H
+
 #include<iostream>
 #include<string>
 using namespace std;
@@ -60,7 +64,30 @@ class Student {
 	Private:
 		string m_name;
 }
+#endif
 
+IMPLEMENTATION
 .cpp
 =====
 #include "Student.h"
+
+Student::Student(string n) {
+	m_name = n;
+}
+
+void Student::printName() {
+	cout << m_name;
+}
+
+main.cpp
+
+#include "Student.h"
+
+int main() {
+	Student s("Erik");
+	s.printName();
+	Student* sp = new Student("Erik");
+	sp->printName();
+	delete sp;
+	return 0;
+}

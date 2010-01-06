@@ -25,25 +25,31 @@ int cpsc370math::gcd(const int &x, const int &y){
 
 // Takes n, returns an array with all prime numbers less than n
 int* cpsc370math::prime(const int &n){
-	int i = 1;
-	int j;
-	if (n < 0) {
-		std::cout << "Please enter a positive number.\n" << std::endl;
+	int i, j;
+
+	int* list_of_primes = new int[n];
+
+	for (i = 0; i<n; ++i){
+		list_of_primes[i] = 2+i;
 	}
 
-	int * primes = new int[n];
-
-	for(i = 1; i < n/2; ++i){
-		for (j = 0; j < i; ++j){
-
+	for (i = 2; i<n; ++i){
+		for (j = 0; j < n; ++j){
+			if (j != 0){
+				if(list_of_primes[i+j-2] % i == 0){
+					list_of_primes[i+j-2] = 0;
+				}
+			}
 		}
 	}
 
+	list_of_primes[i+j-2] = 4;
 
-	return &i;
+	return list_of_primes;
 };
 
 // Takes a square matrix n (array of arrays) and the size
+// Assume a 2x2 matrix
 int cpsc370math::determinant(int** matrix, const int& size){
 	return 1;
 };
