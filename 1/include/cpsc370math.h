@@ -21,7 +21,7 @@ class cpsc370math {
     int* prime(const int&);
 
     // Takes a square matrix n (array of arrays) and the size
-    int determinant(int**, const int&);
+    int determinant(int**);
 
     // Takes two vectors of same length (with (x_1, y_1) and (x_2, y_2) coordinates)
     double dot_product(float*, float*);
@@ -33,7 +33,7 @@ class cpsc370math {
     int** transpose(int**, const int&, const int&);
     
     private:
-    int i, j, n, x, y, size, width_1, height_1, width_2, heigh_2;
+    int i, j, k, n, x, y, size, width_1, height_1, width_2, heigh_2;
 
     int** matrix, matrix_2;
     float* vector_1, vector_2;

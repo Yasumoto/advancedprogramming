@@ -1,3 +1,9 @@
 The GCD function is Euclid's algorithm, taken from http://en.wikipedia.org/wiki/Greatest_common_divisor
 
-For my prime number calculator, I looked at http://en.wikipedia.org/wiki/Prime_number for a general referesher, but created the algorithm.
+For my prime number calculator, I looked at http://en.wikipedia.org/wiki/Prime_number for a general referesher, and spoke with Josh King about the general idea for the implementation, then proceeded to trash it on my own.
+
+The determinant "formula" due to http://en.wikipedia.org/wiki/Determinant
+
+Dot Product from http://en.wikipedia.org/wiki/Dot_product
+
+Matrix Multiplicaton is from http://en.wikipedia.org/wiki/Matrix_multiplication. Example problem to double check calculation taken from http://www.purplemath.com/modules/mtrxmult.htm
