@@ -1,0 +1,126 @@
+* Initialization Lists
+** Skip the step of making everything equal to something separately:
+
+	Course::Course(int num, string title, string descriptior):m_num(num),m_desc("Programming"){... blahblah}
+
+**Also, in order to subclass:
+	Class A{
+		A(String id);
+	}
+
+	Class B:public A {
+		B();
+	}
+
+	in the implementation:
+		B:B():A("Chapman"){ }
+	
+to make a constant function, do
+
+	int getNumber() const;
+
+which means that you can't edit any values during this function, good to prevent you from mucking around accidentally. (can't do this for a set method)
+
+.h
+-------
+Class Pet {
+	public:
+		Pet(int id);
+		int getID();
+		bool canShake();
+	protected:
+		int m_id;
+};
+=====================
+pet.cpp
+-------
+// The child class (in this case, dog) can override this
+bool Pet::canShake(){
+	return false;
+}
+==========================
+Dog.h
+------
+Class Do:Public Pet {
+	public:
+		void bark();
+		Dog(int tag);
+	private:
+	.
+	.
+	.
+};
+===========================
+Dog.cpp
+--------
+void Dog::bark(){
+	cout << "Bark!\n";
+
+}
+Dog::Dog(int tag):Pet(tag){ }
+// We can over ride the parent's method
+bool Dog::canShake(){
+	return true;
+}
+====================
+main.cpp
+--------
+pet* p;
+Dog* D = new Dog(30);
+
+P = D;
+P->canShake();
+
+// this won't work, polymorphism won't happen, it'll implement the pet version of canShake(returning false) not Dog's.
+// instead, in Pet.h, declare the bool canShake as: virtual bool canShake();
+
+RULE:
+If you want to use polymorphism, any function you want to use has to be declared as polymorphic.
+
+If you want polymorphism to work, and you want late binding, you have to work with pointers.
+
+objects on the stack are not polymorphic.
+
+* Casting
+
+ArrayList a = new ArrayList();
+string s = "Erik";
+al.add(s);
+string x = (string)al.element(0);
+
+--------------
+
+dynamic_cast // upcasting unless polymorphic, then you can downcast
+
+static_cast // up/down casting class hierarchy
+
+reinterpret_cast // anything(dangerous)
+
+const_cast // add/remove constness
+
+for example!:
+        Pet p;
+	Dog d(30);
+
+	p = dynamic_cast<Pet> d; //upcast
+	Pet* p;
+	Dog* d = new Dog(30);
+	p = static_cast<Pet*> d; //upcast
+	// p is actually pointing to a dog
+
+	Dog* g;
+	g = static_cast<Dog*> p;
+	// this also workd.
+
+// The above is just like how polymorphism works in java
+
+at 1:23:29 in lecture:
+
+void foo(char* c):
+
+main() {
+		const char*c = "Erik";
+		foo(const_cast<char*> e);
+		//WHOA REMOVING THE CONST
+}
+
