@@ -124,3 +124,12 @@ main() {
 		//WHOA REMOVING THE CONST
 }
 
+
+
+because we're not recovering C codes, but used to java, we'll primarily be using static_casts
+
+TOMORROW:
+
+operator overloading
+friend functions
+templated types
